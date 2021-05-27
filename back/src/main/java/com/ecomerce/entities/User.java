@@ -14,15 +14,15 @@ public class User {
     @Column(name="ID")
     private long Id;
 
-    @Column(name = "DESCRIPTION", nullable = false, length = 100)
-    private String description;
+    @Column(name = "PASSWORD", nullable = false, length = 100)
+    private String password;
 
     @Deprecated
     public User(){
     }
 
     private User(@NotNull String description) {
-        this.description = Objects.requireNonNull(description, "description must not be null");
+        this.password = Objects.requireNonNull(description, "password must not be null");
     }
 
     public static User of(@NotNull String description) {
@@ -33,8 +33,8 @@ public class User {
         return Id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getPassword() {
+        return password;
     }
 
     @Override
@@ -42,12 +42,12 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(description, user.description);
+        return Objects.equals(password, user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(description);
+        return Objects.hash(password);
     }
 
 
