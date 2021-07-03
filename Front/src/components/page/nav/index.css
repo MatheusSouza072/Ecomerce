@@ -1,0 +1,15 @@
+.active{
+    background-color: grey !important;
+}
+
+.navBar{
+    background-color: #000000 !important;
+}
+
+.nav{
+    padding-left: 15px;
+}
+
+.logo{
+    padding: 15px;
+}
