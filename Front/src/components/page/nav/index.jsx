@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './index.css';
+import './index.css';
 import imageLogo from "../../../images/logo.png";
 import {
     Collapse,
@@ -8,15 +8,10 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+    NavLink
 } from 'reactstrap';
 
-const Headers = (props) => {
+const Headers = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -29,7 +24,10 @@ const Headers = (props) => {
                 <Collapse isOpen={isOpen} navbar  >
                     <Nav className="mr-auto " navbar className="nav">
                         <NavItem>
-                            <NavLink className="active" href="#">Produtos</NavLink>
+                            <NavLink className="active" href="#">Adminstrador</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="#">Produtos</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="#">Orçamentos</NavLink>
