@@ -1,0 +1,4 @@
+com/product/entities/Product.class
+com/product/repository/ProductRepository.class
+com/product/ProductApplication.class
+com/product/controller/ProductController.class

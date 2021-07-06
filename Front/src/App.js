@@ -1,11 +1,12 @@
-import './App.css';
-import Page from "./components/page";
+import PageComponent from "./components/page";
+import Page from "./pages";
 
 
 function App() {
   return (
     <div className="App">
-    <Page></Page>
+      <PageComponent></PageComponent>
+      <Page></Page>
     </div>
   );
 }
