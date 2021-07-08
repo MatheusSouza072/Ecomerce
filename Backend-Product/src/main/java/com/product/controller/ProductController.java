@@ -17,6 +17,7 @@ public class ProductController {
 
     ProductRepository repository;
 
+    @CrossOrigin
     @GetMapping("/product")
     public List<Product> getAllProducts(){
         return repository.findAll();
