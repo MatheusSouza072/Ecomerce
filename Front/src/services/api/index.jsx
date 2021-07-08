@@ -1,7 +1,7 @@
 import axios from "axios";
 
  const apiProduct = axios.create({
-     baseURL: 'http://localhost:7070/product/',
+     baseURL: 'http://localhost:7050/product/',
 
 })
 
