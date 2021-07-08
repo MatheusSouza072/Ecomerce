@@ -20,6 +20,9 @@ public class ProductController {
 
     @ApiOperation(value = "return all products")
     @GetMapping("/product")
+    @ApiResponses(
+            @ApiResponse(code = 200, message = "success")
+    )
     public ResponseEntity getAllProducts(){
         try {
             return new ResponseEntity<>( repository.findAll(), HttpStatus.OK);
@@ -29,7 +32,7 @@ public class ProductController {
     }
     @ApiOperation(value = "return product by id")
     @ApiResponses(
-            @ApiResponse(code = 200, message = "")
+            @ApiResponse(code = 200, message = "success")
     )
     @GetMapping("/product/{id}")
     public ResponseEntity getProductById(@PathVariable Long id){
