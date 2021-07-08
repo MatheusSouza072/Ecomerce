@@ -1,6 +1,6 @@
 package com.product.entities;
 
-import com.sun.istack.NotNull;
+import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,12 +20,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
 
-    @NotNull
+    @NotNull(message = "Name may not be null")
     String name;
 
-    @NotNull
+    @NotNull(message = "Price may not be null")
     float preco;
 
+    @NotNull(message = "Description may not be null")
     String description;
 
     public long getId() {
